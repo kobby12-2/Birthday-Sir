@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday!</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body id="vanta-bg">
+
+<div class="container-fluid main-bg text-center">
+  <div class="overlay">
+    <h1 class="title">Happy Birthday, Mr. Eddie 🎉🎊</h1>
+    <p class="subtitle">Wishing you a day filled with love, laughter, and all your favorite things!</p>
+    <div class="images">
+        <img src="bb5c72ee-7341-42f9-af83-bb9e4bc22b6f.JPG" alt="Birthday Person" class="rounded-circle img-small">
+    </div>
+      
+    <div class="signature">
+        <img src="695ead20-82d1-435c-a244-d767e03a59a4.JPG" alt="Your Image" class="signature-img">
+        <p class="signature-text">From: <em>Spirited Vessels</em></p>
+    </div>
+      
+    <button class="btn btn-custom mt-4" onclick="showMessage()">Click for a Surprise Message!</button>
+    <p class="message-text mt-4" id="message">🎈 Happy Birthday,Sir! Wishing you a day filled with joy and laughter. Your wisdom and help has made shaped this choir to best state. 
+        We pray nothing but the best in all you do; your finances, marriage, home, work, personal life, your relationship with God and every building in your career, we declare them blessed.
+        You are a blessing to us Mr. Eddie. This family says may God bless you. And we love you so much.
+        Here’s to another year of amazing memories and adventures! Enjoy your day! 🎈</p>
+  </div>
+  <audio id="welcome-audio" src="happy-birthday-to-you-bossa-nova-style-arrangement-21399.mp3"></audio>
+<audio id="birthday-audio" src="May His favor be upon you and a thousand generations!.mp3 " loop></audio>
+
+</div>
+
+<script src="script.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@0.5.24/dist/vanta.birds.min.js"></script>
+
+    <script>
+        VANTA.BIRDS({
+            el: "#vanta-bg",  // Changed to the body ID
+            mouseControls: true,
+            touchControls: true,
+            gyroControls: false,
+            minHeight: 200.00,
+            minWidth: 200.00,
+            scale: 1.00,
+            scaleMobile: 1.00
+        });
+    </script>
+</body>
+</html>

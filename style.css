@@ -1,0 +1,202 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body, html {
+    height: 100%;
+    background-color: #0a0e27; /* Dark background color */
+    min-height: 100vh; /* Minimum height of the viewport */
+}
+
+.main-bg {
+    background: url('background-image.jpg') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+}
+
+.overlay {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 90%; /* Max width for small screens */
+}
+
+.title {
+    font-size: 2.5rem; /* Smaller size for better responsiveness */
+    font-weight: 600;
+}
+
+.subtitle {
+    font-size: 1.25rem; /* Adjusted for smaller screens */
+    margin-top: 10px;
+}
+
+.images img {
+    width: 100%;
+    max-width: 180px;
+    border-radius: 50%;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
+    border: 5px solid white;
+}
+
+.img-small {
+    width: 150px; /* Adjusted size */
+    height: 150px; /* Adjusted size */
+}
+
+.signature {
+    position: absolute;
+    bottom: 10px;
+    right: 20px;
+    text-align: center;
+    color: #fff;
+    z-index: -1;
+}
+
+@keyframes blink {
+    0%, 100% {
+        box-shadow: 0px 0px 10px 5px white;
+    }
+    50% {
+        box-shadow: 0px 0px 20px 10px white;
+    }
+}
+
+.signature-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    animation: blink 1.5s infinite;
+    transition: transform 0.3s ease;
+}
+
+.signature-img:hover {
+    transform: scale(1.2);
+}
+
+.signature-text {
+    font-size: 16px;
+    margin-top: 8px;
+}
+
+.btn-custom {
+    background-color: #ff0066;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 25px;
+    transition: background-color 0.3s;
+}
+
+.btn-custom:hover {
+    background-color: #e6005c;
+}
+
+.message-text {
+    font-size: 1.4rem;
+    display: none;
+    color: #ffdd57;
+    margin-top: 20px;
+}
+
+.message-text {
+    font-size: 16px;
+    display: none; /* Initially hidden */
+    color: white;
+    font-weight: bold;
+    margin-top: 20px;
+    text-shadow: 2px 2px 5px rgba(255, 0, 0, 0.6);
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.animate-message {
+    display: block;
+    animation: scaleUp 1s ease forwards, pulse 1.5s infinite;
+}
+
+/* Animation for the fade-in effect */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Animation for scale-up and pulse effect */
+@keyframes scaleUp {
+    from { transform: scale(0.5); }
+    to { transform: scale(1); }
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+    .title {
+        font-size: 2rem; /* Smaller font size for tablets */
+    }
+
+    .subtitle {
+        font-size: 1rem; /* Smaller font size for tablets */
+    }
+
+    .signature {
+        bottom: 5px;
+        right: 10px;
+        z-index: -1;
+    }
+
+    .signature-img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .btn-custom {
+        font-size: 1rem; /* Smaller button text */
+        padding: 8px 16px; /* Adjust padding */
+    }
+
+    .message-text {
+        font-size: 1rem; /* Adjust message font size */
+    }
+}
+
+@media (max-width: 576px) {
+    .title {
+        font-size: 1.5rem; /* Smaller font size for mobile */
+    }
+
+    .subtitle {
+        font-size: 0.9rem; /* Smaller font size for mobile */
+    }
+
+    .signature {
+        bottom: 2px;
+        right: 5px;
+        z-index: -1;
+    }
+
+    .signature-img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .btn-custom {
+        font-size: 0.9rem; /* Smaller button text for mobile */
+        padding: 6px 12px; /* Adjust padding */
+    }
+
+    .message-text {
+        font-size: 0.9rem; /* Adjust message font size */
+    }
+}
+
